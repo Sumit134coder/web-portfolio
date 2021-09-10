@@ -12,11 +12,12 @@
 body{
     background-color: var(--primary);
     height: 100vh;
+    width: 1440px;
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-/*
 
 
 .ocean { 
@@ -25,11 +26,13 @@ html{
   position:absolute;
   bottom:0;
   left:0;
+  z-index: -10;
 }
 .wave {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
   position: absolute;
   top: -198px;
+  overflow-x: hidden;
   width: 6400px;
   height: 198px;
   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
@@ -58,7 +61,7 @@ html{
   50% {
     transform: translate3d(0,5px,0);
   }
-} */
+} 
 /*personal styles*/
 
 section{
@@ -101,6 +104,10 @@ nav ul{
 nav ul li{
     list-style: none;
     margin-left: 1em;
+}
+
+nav ul li a:focus,nav ul li a:visited{
+  text-decoration: underline;
 }
 
 /*home-page*/
@@ -157,6 +164,7 @@ nav ul li{
 }
 #icons .fab{
   padding: 0 2rem;
+  cursor: pointer;
 }
 
 /*Cards section*/
@@ -228,6 +236,67 @@ background: linear-gradient(to right, #ff79a1, #8444C5); /* W3C, IE 10+/ Edge, F
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+/*blogs*/
+#blogs{
+  background-color: #532E7A;
+  padding-top: 6rem;
+}
+#upper-sec{
+  display: flex;
+  padding: 0 3rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 48px;
+}
+#blog-btn{
+  border: 0.5rem solid yellow;
+  padding:1rem 2rem;
+  font-family: 'Nova Square', cursive;
+  font-size: 40px;
+  border-radius: 20px;
+}
+.blog{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid yellow;
+}
+.blog>div{
+  width: 50%;
+}
+.blog-text{
+  color: #fff;
+  line-height: 1.2;
+}
+.blog-text h3{
+  font-size: 38px;
+}
+.blog-text p{
+  font-size: 24px;
+}
+.blog-img{
+  margin-left: 20px;
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+/*projects*/
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards{
+  margin: 20px;
+  height: 300px;
+  width: 250px;
+  border: 1px solid yellow;
 }
 /* mobile styling */
 @media (max-width:480px) {
